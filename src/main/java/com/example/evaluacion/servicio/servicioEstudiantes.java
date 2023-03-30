@@ -29,7 +29,7 @@ public class servicioEstudiantes {
         return "registro exitoso";
     }
 
-    public ArrayList promedio() {
+    public String promedio() {
         float promedio = 0;
 
         for (int i = 0; i < lista.size(); i++) {
@@ -41,7 +41,7 @@ public class servicioEstudiantes {
                 lista.get(i).setJuicio("Desaprobado");
             }
         }
-        return listaprueba;
+        return "listaprueba";
     }
 }
 

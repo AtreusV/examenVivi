@@ -19,8 +19,13 @@ public class controladorEstudiante {
         return servicio.listar();
     }
 
+    @PostMapping("/agregarEstudiante")
+    public String agregar(@RequestBody Estudiante estudiante){
+        return servicio.agregarUsuario(estudiante);
+    }
+
     @RequestMapping("/calcularJuicio")
-    public ArrayList calcularJuicio(){
+    public String calcularJuicio(){
         return servicio.promedio();
     }
 }
