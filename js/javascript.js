@@ -28,19 +28,17 @@ $(document).ready(function(){
 
     $('#agregar').on('click', function() {
         let datos = {
-            codigo: parseInt($('#idUsuario').val()),
-            curso: $('#Curso').val(),
-            nombre: $('#Nombre').val(),
-            apellido: $('#Apellido').val(),
-            materias: materias = [$('#Mate1').val(), $('#Mate2').val(), $('#Mate3').val()],
-            notas: notas = [parseFloat($('#Nota1').val()), parseFloat($('#Nota2').val()), parseFloat($('#Nota3').val())],
+            iDcodigo: parseInt($('#idUsuario').val()),
+            nombreEstu: $('#nombre').val(),
+            apellidoEstu: $('#Apellido').val(),
+            materiasEstu: materias = [$('#materia1').val(), $('#materia2').val(), $('#materia3').val()],
+            notasEstu: notas = [parseFloat($('#nota1').val()), parseFloat($('#nota2').val()), parseFloat($('#nota3').val())],
         }
-        console.log(datos);
+
         let datosEnvio = JSON.stringify(datos);
-        console.log(datosEnvio);
     
         $.ajax({
-            url: "http://localhost:8080/agregar",
+            url: "http://localhost:8080/agregarEstudiante",
             type: "POST",
             data: datosEnvio,
             contentType: "application/JSON",

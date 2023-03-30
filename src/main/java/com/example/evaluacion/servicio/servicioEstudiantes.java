@@ -24,7 +24,7 @@ public class servicioEstudiantes {
         return lista;
     }
 
-    public String agregarUsuario(Estudiante estud){
+    public String agregarEstudiante(Estudiante estud){
         lista.add(estud);
         return "registro exitoso";
     }
