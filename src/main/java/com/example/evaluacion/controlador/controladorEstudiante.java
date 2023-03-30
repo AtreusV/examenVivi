@@ -20,10 +20,67 @@ public class controladorEstudiante {
     }
 
     @RequestMapping("/calcularJuicio")
-    public ArrayList promedio(){
+    public ArrayList calcularJuicio(){
         return servicio.promedio();
     }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     @DeleteMapping("/eliminarEstudiante")
     public ArrayList<Estudiante> eliminarEstudiante(){
         return servicio.eliminarEstudiante();
@@ -31,9 +88,6 @@ public class controladorEstudiante {
 
     @PostMapping("/modificarEstudiante")
     public String modificarEstudiante(@RequestBody Estudiante estudiante){
-
-
         return servicio.ModificarEs(estudiante);
     }
-
-}
+    */

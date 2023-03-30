@@ -2,64 +2,68 @@ package com.example.evaluacion.Productos;
 
 public class Estudiante {
 
-    private int codigo;
-    private String Nombre;
-    private String Apellido;
-    private String[] Materias;
-    private float[] Notas;
-    private String Juicio;
+    private int iDcodigo;
+    private String nombreEstu;
+    private String apellidoEstu;
+    private String[] materiasEstu;
+    private float[] notasEstu;
+    private String Juicio ;
 
-    public Estudiante(int codigo, String nombre, String apellido, String[] materias, float[] notas, String juicio) {
-        this.codigo = codigo;
-        Nombre = nombre;
-        Apellido = apellido;
-        Materias = materias;
-        Notas = notas;
+    public Estudiante(int iDcodigo, String nombreEstu, String apellidoEstu, String[] materiasEstu, float[] notasEstu, String juicio) {
+        this.iDcodigo = iDcodigo;
+        this.nombreEstu = nombreEstu;
+        this.apellidoEstu = apellidoEstu;
+        this.materiasEstu = materiasEstu;
+        this.notasEstu = notasEstu;
         Juicio = juicio;
     }
 
-    public int getCodigo() {
-        return codigo;
+    //getter
+
+    public int getiDcodigo() {
+        return iDcodigo;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public String getNombreEstu() {
+        return nombreEstu;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getApellidoEstu() {
+        return apellidoEstu;
     }
 
-    public void setNombre(String nombre) {
-        Nombre = nombre;
+    public String[] getMateriasEstu() {
+        return materiasEstu;
     }
 
-    public String getApellido() {
-        return Apellido;
-    }
-
-    public void setApellido(String apellido) {
-        Apellido = apellido;
-    }
-
-    public String[] getMaterias() {
-        return Materias;
-    }
-
-    public void setMaterias(String[] materias) {
-        Materias = materias;
-    }
-
-    public float[] getNotas() {
-        return Notas;
-    }
-
-    public void setNotas(float[] notas) {
-        Notas = notas;
+    public float[] getNotasEstu() {
+        return notasEstu;
     }
 
     public String getJuicio() {
         return Juicio;
+    }
+
+
+    //setter
+    public void setiDcodigo(int iDcodigo) {
+        this.iDcodigo = iDcodigo;
+    }
+
+    public void setNombreEstu(String nombreEstu) {
+        this.nombreEstu = nombreEstu;
+    }
+
+    public void setApellidoEstu(String apellidoEstu) {
+        this.apellidoEstu = apellidoEstu;
+    }
+
+    public void setMateriasEstu(String[] materiasEstu) {
+        this.materiasEstu = materiasEstu;
+    }
+
+    public void setNotasEstu(float[] notasEstu) {
+        this.notasEstu = notasEstu;
     }
 
     public void setJuicio(String juicio) {

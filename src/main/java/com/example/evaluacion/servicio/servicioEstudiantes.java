@@ -7,10 +7,12 @@ import java.util.ArrayList;
 public class servicioEstudiantes {
 
     ArrayList<Estudiante> lista = new ArrayList<>();
+    ArrayList<Estudiante> listaprueba = new ArrayList<>();
+
 
     public servicioEstudiantes() {
 
-        lista.add(new Estudiante(1, "Arturo", "Henriquez", new String[]{"matematicas", "Español", "Ingles"}, new float[]{4.5f, 3.0f, 2.5f}, ""));
+        lista.add(new Estudiante(1, "Arturo", "Henriquez", new String[]{"matematicas", "Español", "Ingles"}, new float[]{1.5f, 1.0f, 2.5f}, ""));
         lista.add(new Estudiante(2, "Nicolas", "Lopez", new String[]{"Deportes", "Matematicas", "Ingles"}, new float[]{3.5f, 4.0f, 5.0f}, ""));
         lista.add(new Estudiante(3, "raulinio", "ignacio", new String[]{"Ciencias", "Quimica", "Español"}, new float[]{5.0f, 4.3f, 4.0f}, ""));
         lista.add(new Estudiante(4, "ester", "mejia", new String[]{"Ciencias", "Quimica", "Español"}, new float[]{5.0f, 4.3f, 4.0f}, ""));
@@ -18,30 +20,28 @@ public class servicioEstudiantes {
     }
 
     public ArrayList<Estudiante> listar() {
+        promedio();
         return lista;
     }
 
-    public ArrayList promedio() {
+    public String agregarUsuario(Estudiante estud){
+        lista.add(estud);
+        return "registro exitoso";
+    }
 
-        double promedio = 0;
-        double total = 0;
+    public ArrayList promedio() {
+        float promedio = 0;
 
         for (int i = 0; i < lista.size(); i++) {
-
-            promedio = lista.get(i).getNotas()[0] + lista.get(i).getNotas()[1] + lista.get(i).getNotas()[2];
-            total = promedio / 3;
-
-            if (total >= 3.0) {
-
+            promedio = (lista.get(i).getNotasEstu()[0] + lista.get(i).getNotasEstu()[1] + lista.get(i).getNotasEstu()[2])/3;
+            if (promedio >= 3.0) {
                 lista.get(i).setJuicio("Aprobado");
                 lista.set(i, lista.get(i));
             } else {
                 lista.get(i).setJuicio("Desaprobado");
             }
-
         }
-
-        return lista;
+        return listaprueba;
     }
 }
 
