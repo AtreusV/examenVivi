@@ -34,6 +34,7 @@ $(document).ready(function(){
             materiasEstu: materias = [$('#materia1').val(), $('#materia2').val(), $('#materia3').val()],
             notasEstu: notas = [parseFloat($('#nota1').val()), parseFloat($('#nota2').val()), parseFloat($('#nota3').val())],
         }
+        console.log(datos)
 
         let datosEnvio = JSON.stringify(datos);
     

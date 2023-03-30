@@ -21,7 +21,7 @@ public class controladorEstudiante {
 
     @PostMapping("/agregarEstudiante")
     public String agregar(@RequestBody Estudiante estudiante){
-        return servicio.agregarUsuario(estudiante);
+        return servicio.agregarEstudiante(estudiante);
     }
 
     @RequestMapping("/calcularJuicio")
